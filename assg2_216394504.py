@@ -9,13 +9,13 @@ healthRate1=100;
 healthRate2=100;
 
 def create_character(name):
-    
+
     att = input("Please enter attack value");
     defe = input("Please enter defence value");
     
     Character = {'Name': name, 'Attack':att, 'Defence': defe, 'Health': healthRate}
     print(json.dumps(Character, indent = 4))
- 
+    
 
 def create_opponents():
   
@@ -45,11 +45,23 @@ def battle(player, opponent):
     # Implement your code here
     pass
 
+    AttcPlayer = player.get("Attack")
+    AttcOpp =opponent.get("Attack")
+    DefePlayer = player.get("Defence")
+    DefeOpp=opponent.get("Defence")
+    game_log ={}
+
     while healthRate1 & healthRate2 & healthRate !=0 :
-        if():
-            1+1
-        else:
-            2+2
+        if(AttcPlayer>DefeOpp):
+           Decrease= AttcPlayer-DefeOpp
+        opponent.get("Health")-Decrease
+       
+        if(AttcOpp>DefePlayer):
+           Decrease= AttcOpp-DefePlayer
+        player.get("Health")-Decrease 
+        
+    fort = open("demofile3.txt", "w")
+    fort.append(outcome)
 
 def save_log_entry(entry):
     """
@@ -71,3 +83,4 @@ def play_game():
 play_game()
 create_character('James')
 create_opponents()
+battle('James', 'Batman')
