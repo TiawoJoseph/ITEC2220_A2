@@ -61,7 +61,7 @@ def battle(player, opponent):
         player.get("Health")-Decrease 
         
     fort = open("demofile3.txt", "w")
-    fort.append(outcome)
+    # fort.append(outcome)
 
 def save_log_entry(entry):
     """
